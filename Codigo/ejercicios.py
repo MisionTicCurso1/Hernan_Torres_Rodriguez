@@ -5,7 +5,6 @@ cantidadBrownie = 5
 cantidadBanquillo = 5
 selectedIce = 0
 def ice():
-    
     print("Bienvenido a la Tienda de Helados")
     print("El menu es el siguiente")
     print("1. El helado sin topping cuesta 1.900")
@@ -38,6 +37,7 @@ def ice():
     if(respuesta == "No" or respuesta == "no" or respuesta == "NO"):
         print("Gracias")
 ice()
+
 # #Ejercicio 2
 # consumo = 2557
 # unidad = 7
