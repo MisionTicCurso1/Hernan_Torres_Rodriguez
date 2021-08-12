@@ -5,6 +5,11 @@ cantidadBrownie = 5
 cantidadBanquillo = 5
 selectedIce = 0
 def ice():
+    global cantidadOreo
+    global cantidadKitKat
+    global cantidadBrownie
+    global cantidadBanquillo
+    global selectedIce
     print("Bienvenido a la Tienda de Helados")
     print("El menu es el siguiente")
     print("1. El helado sin topping cuesta 1.900")
