@@ -28,22 +28,26 @@ p{
     font-family: 'Pokemon Font';
     font-size: 1.7rem;
     margin-right: 70px;
+    transition: 0.8s;
+    font-weight: bold;
+
 }
 select{
     margin-top: 1.5%;
-    height: 5vh;
+    height: 40px;
     width: 10vw;
     font-family: 'Pokemon Font';
     font-weight: 100;
     background: #ffcb05;
     border-radius: 5px;
     outline: blue;
+    transition: 0.8s;
 }
 #search{
-    width: 5vw;
     height: 50px;
     font-family: 'Pokemon Font';
-    margin-left: 47.5vw;
+    width: 30%;
+    margin-left: 35vw;
     background: #e3350d;
     border-radius: 10px;
     transition: 0.8s;
@@ -54,13 +58,17 @@ select{
 }
 #contenido{
     display: grid;
+    /* width: 100vw; */
     grid-template-columns: repeat(4,37vh);
     grid-auto-rows: 45vh;
     gap: 100px;
     padding-left: 50px;
-    /* background: green; */
     padding-top: 100px;
     margin-bottom: 30vh;
+    justify-content: center;
+    transition: 0.9s;
+    position: relative;
+
 }
 .contenedorPokemon{
     background: rgba(255, 0, 0,0.5);
@@ -73,11 +81,12 @@ select{
     transform: scale(1.03);
 }
 .contenedorPokemon img{
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
+    height: 70%;
     margin-top: 10px;
 }
 .contenedorPokemon p{
+    width: 100%;
     margin-top: 40px;
     text-align: center;
     color: white;
@@ -85,4 +94,59 @@ select{
     font-size: 1.3rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 100;
+}
+#loader{
+    width: 50px;
+    position: absolute;
+    height: 50px;
+    margin: auto;
+    display: none;
+}
+@keyframes girar{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#loader img{
+    width: 100%;
+    height: 100%;
+    animation: girar 0.5s infinite;
+}
+@media (max-width:600px){
+    #contenido{
+        grid-template-columns: repeat(1,37vh);
+        grid-auto-rows: 45vh;
+    }
+    #seleccion_tipo{
+        display: block;
+        margin-bottom: 120px;
+        text-align: center;
+    }
+    select{
+        width: 50vw;
+    }
+}
+@media (min-width:601px) and (max-width: 900px){
+    #contenido{
+        width: 100vw;
+        grid-template-columns: repeat(2,37vh);
+        grid-auto-rows: 45vh;
+    }
+    #seleccion_tipo{
+        display: block;
+        margin-bottom: 120px;
+        text-align: center;
+    }
+    select{
+        width: 50vw;
+    }
+}
+@media (min-width: 901px) and (max-width: 1200px){
+    #contenido{
+        grid-template-columns: repeat(3,37vh);
+        grid-auto-rows: 45vh;   
+    }
 }
