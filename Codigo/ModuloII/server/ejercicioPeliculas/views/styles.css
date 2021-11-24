@@ -1,0 +1,105 @@
+body{
+    margin:0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+    color:black;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 50px;
+}
+li{
+    color:black;
+    font-size: 1.1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+li:hover{
+    border-bottom: 3px solid blueviolet;
+}
+h1{
+    text-align: center;
+    margin-top: 50px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,19vw);
+    grid-template-rows: 55vh;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+    transition: 0.9s;
+    margin-bottom: 120px;
+}   
+
+.container div{
+    cursor: pointer;
+}
+div{
+    position: relative;
+}
+.info{
+    position: absolute;
+    background: rgba(0, 0, 0,0.9);
+    border-radius: 4px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    display: none;
+    transition: 0.9s;
+    border: 1px solid blueviolet;
+    box-shadow: 0px 0px 4px 2px blueviolet;
+}
+.container div:hover .info{
+    display: block;
+}
+img{
+    width: 100%;
+    height: 55vh;
+    border-radius: 4px;
+}
+div p{
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    margin-top: 70px;
+    font-weight: bold;
+}
+button{
+    width: 60%;
+    height: 40px;
+    font-size: 1rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 3px solid white;
+    background: none;
+    color: white;
+    transition: 0.9s;
+}
+button:hover{
+    transform: scale(1.08);
+    background: chartreuse;
+    color: black;
+    border: 3px solid black;
+}
+.one{
+    margin-top: 100px;
+    background: blueviolet;
+    color: black;
+    border: none;
+    color: white;
+}
+.one:hover{
+    background: blueviolet;
+    color: white;
+    transform: scale(0.95);
+    border: none;
+}
